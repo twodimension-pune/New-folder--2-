@@ -11,5 +11,7 @@ def generate_pdf_report(name, rounds, result, tech_score, hr_score=None):
     pdf.cell(200, 10, txt=f"Technical Score: {tech_score}/50", ln=1)
     if hr_score:
         pdf.cell(200, 10, txt=f"HR Score: {hr_score}/30", ln=1)
+        
+        # output is in pdf format
 
     pdf.output(f"feedback_reports/{name}_report.pdf")
